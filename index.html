@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pole Dance Kiseleva — премиальная школа pole dance, стретчинга и йоги в Москве. Индивидуальные тренировки, профессиональные тренеры, дружелюбная атмосфера.">
+    <meta name="description" content="Pole Dance Kiseleva — премиальная школа pole dance, стретчинга и йоги в Москве.">
     <title>Pole Dance Kiseleva | Премиальная школа танцев в Москве</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +23,8 @@
             --gold-dark: #B59020;
             --dark: #1a1a1a;
             --darker: #0a0a0a;
-            --cream: #FAF9F6;
-            --cream-dark: #F2F0EB;
-            --cream-darker: #E8E4D9;
+            --cream: #F5F1E8;
+            --cream-dark: #EBE5D9;
             --text-gray: #555555;
         }
 
@@ -59,7 +58,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(10, 10, 10, 0.98);
             backdrop-filter: blur(12px);
             z-index: 1000;
             padding: 20px 0;
@@ -194,7 +193,7 @@
 
         .hero-description {
             font-size: 17px;
-            color: rgba(250, 249, 246, 0.8);
+            color: rgba(245, 241, 232, 0.85);
             max-width: 650px;
             margin: 0 auto 45px;
             font-weight: 300;
@@ -335,182 +334,9 @@
             aspect-ratio: 3/4;
         }
 
-        /* Услуги с фото */
-        .services {
-            background: var(--cream-dark);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--cream);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.5s ease;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
-            border-color: var(--gold);
-        }
-
-        .service-image {
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s ease;
-        }
-
-        .service-card:hover .service-image img {
-            transform: scale(1.1);
-        }
-
-        .service-content {
-            padding: 30px;
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: var(--text-gray);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .service-price {
-            font-size: 18px;
-            color: var(--gold-dark);
-            font-weight: 600;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        /* Цены */
-        .pricing {
-            background: var(--darker);
-            color: var(--cream);
-        }
-
-        .pricing .section-title h2 {
-            color: var(--cream);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .pricing-card {
-            background: rgba(250, 249, 246, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 45px 35px;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--gold);
-            background: rgba(212, 175, 55, 0.08);
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured::before {
-            content: 'ПОПУЛЯРНОЕ';
-            position: absolute;
-            top: 20px;
-            right: -32px;
-            background: var(--gold);
-            color: var(--darker);
-            padding: 6px 40px;
-            font-size: 10px;
-            letter-spacing: 2px;
-            font-weight: 700;
-            transform: rotate(45deg);
-        }
-
-        .pricing-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-8px);
-        }
-
-        .pricing-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--gold);
-        }
-
-        .pricing-card .price {
-            font-size: 42px;
-            font-weight: 300;
-            margin: 20px 0;
-            color: var(--cream);
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .pricing-card .price span {
-            font-size: 16px;
-            color: rgba(250, 249, 246, 0.6);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            margin: 30px 0;
-            text-align: left;
-        }
-
-        .pricing-card ul li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(250, 249, 246, 0.1);
-            font-size: 14px;
-            color: rgba(250, 249, 246, 0.85);
-            display: flex;
-            align-items: center;
-        }
-
-        .pricing-card ul li::before {
-            content: '';
-            color: var(--gold);
-            margin-right: 12px;
-            font-size: 12px;
-        }
-
-        .pricing-card .cta-button {
-            width: 100%;
-            text-align: center;
-            padding: 16px;
-            font-size: 11px;
-            animation: none;
-        }
-
-        /* Тренер */
+        /* Основатель школы */
         .instructor {
-            background: var(--cream);
+            background: var(--cream-dark);
         }
 
         .instructor-content {
@@ -568,7 +394,7 @@
             margin: 30px 0;
             line-height: 1.8;
             font-family: 'Cormorant Garamond', serif;
-            background: rgba(212, 175, 55, 0.05);
+            background: rgba(212, 175, 55, 0.08);
             padding: 25px 25px 25px 30px;
             border-radius: 0 8px 8px 0;
         }
@@ -591,7 +417,7 @@
         }
 
         .instructor-bio ul li::before {
-            content: '';
+            content: '✦';
             color: var(--gold);
             position: absolute;
             left: 0;
@@ -619,6 +445,165 @@
             transform: translateY(-6px);
             box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
             border-color: var(--gold);
+        }
+
+        /* Услуги - простые карточки без фото */
+        .services {
+            background: var(--cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--cream-dark);
+            padding: 45px 35px;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+            border-color: var(--gold);
+        }
+
+        .service-icon {
+            font-size: 48px;
+            margin-bottom: 25px;
+            display: block;
+            color: var(--gold-dark);
+        }
+
+        .service-card h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-price {
+            font-size: 20px;
+            color: var(--gold-dark);
+            font-weight: 600;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Цены */
+        .pricing {
+            background: var(--darker);
+            color: var(--cream);
+        }
+
+        .pricing .section-title h2 {
+            color: var(--cream);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: rgba(245, 241, 232, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 45px 35px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'ПОПУЛЯРНОЕ';
+            position: absolute;
+            top: 20px;
+            right: -32px;
+            background: var(--gold);
+            color: var(--darker);
+            padding: 6px 40px;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            transform: rotate(45deg);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .pricing-card .price {
+            font-size: 42px;
+            font-weight: 300;
+            margin: 20px 0;
+            color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .pricing-card .price span {
+            font-size: 16px;
+            color: rgba(245, 241, 232, 0.6);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-card ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(245, 241, 232, 0.1);
+            font-size: 14px;
+            color: rgba(245, 241, 232, 0.85);
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-card ul li::before {
+            content: '✦';
+            color: var(--gold);
+            margin-right: 12px;
+            font-size: 12px;
+        }
+
+        .pricing-card .cta-button {
+            width: 100%;
+            text-align: center;
+            padding: 16px;
+            font-size: 11px;
+            animation: none;
         }
 
         /* Галерея студии */
@@ -686,7 +671,7 @@
             text-align: center;
             padding: 30px 20px;
             border-radius: 8px;
-            background: rgba(250, 249, 246, 0.03);
+            background: rgba(245, 241, 232, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.15);
             transition: all 0.4s ease;
         }
@@ -713,7 +698,7 @@
 
         .feature-item p {
             font-size: 14px;
-            color: rgba(250, 249, 246, 0.7);
+            color: rgba(245, 241, 232, 0.7);
             line-height: 1.7;
         }
 
@@ -895,7 +880,7 @@
         }
 
         .footer-links a {
-            color: rgba(250, 249, 246, 0.6);
+            color: rgba(245, 241, 232, 0.6);
             text-decoration: none;
             font-size: 12px;
             letter-spacing: 2px;
@@ -908,10 +893,10 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(250, 249, 246, 0.1);
+            border-top: 1px solid rgba(245, 241, 232, 0.1);
             padding-top: 30px;
             font-size: 12px;
-            color: rgba(250, 249, 246, 0.5);
+            color: rgba(245, 241, 232, 0.5);
             letter-spacing: 1px;
             line-height: 1.8;
         }
@@ -939,7 +924,7 @@
             transform: translateY(0);
         }
 
-        /* Адаптивность для телефонов */
+        /* Адаптивность */
         @media (max-width: 1024px) {
             .about-content,
             .instructor-content,
@@ -1051,10 +1036,6 @@
                 padding: 30px 20px;
             }
 
-            .service-image {
-                height: 220px;
-            }
-
             .section-title h2 {
                 font-size: 28px;
             }
@@ -1082,8 +1063,8 @@
                 font-size: 11px;
             }
 
-            .service-content {
-                padding: 25px 20px;
+            .service-card {
+                padding: 35px 25px;
             }
 
             .pricing-card {
@@ -1105,9 +1086,9 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">О школе</a></li>
+                <li><a href="#instructor">Основатель</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#pricing">Цены</a></li>
-                <li><a href="#instructor">Тренер</a></li>
                 <li><a href="#studio">Студия</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
@@ -1154,20 +1135,70 @@
                 </div>
                 <div class="about-images">
                     <div class="about-image large">
-                        <img src="images/hall-main.jpg" alt="Просторный зал школы Pole Dance Kiseleva">
+                        <img src="images/hall-main.jpg" alt="Просторный зал школы">
                     </div>
                     <div class="about-image">
-                        <img src="images/hall-poles.jpg" alt="Профессиональные пилоны для тренировок">
+                        <img src="images/hall-poles.jpg" alt="Профессиональные пилоны">
                     </div>
                     <div class="about-image">
-                        <img src="images/hall-interior.jpg" alt="Стильный интерьер студии">
+                        <img src="images/hall-interior.jpg" alt="Стильный интерьер">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Услуги с премиальными фото -->
+    <!-- Основатель школы - ПЕРЕНЕСЁН ВЫШЕ -->
+    <section class="instructor" id="instructor">
+        <div class="container">
+            <div class="section-title">
+                <p class="section-subtitle">Основатель школы</p>
+                <h2>Евгения Киселева</h2>
+            </div>
+            <div class="instructor-content">
+                <div class="instructor-photo">
+                    <img src="images/owner-main.jpg" alt="Евгения Киселева">
+                </div>
+                <div class="instructor-info">
+                    <h3>Евгения Игоревна Киселева</h3>
+                    <p class="position">Основатель и главный тренер</p>
+                    <blockquote>
+                        «Pole dance – это весело и эффективно! Устала от однообразных тренировок? Приходи к нам на пилон! Здесь ты не только подтянешь фигуру и укрепишь тело, но и получишь массу положительных эмоций!»
+                    </blockquote>
+                    <div class="instructor-bio">
+                        <p>
+                            Профессиональный преподаватель-танцор с многолетним опытом работы. 
+                            Евгения создала уникальное пространство, где каждая девушка может раскрыть свой потенциал, 
+                            почувствовать себя уверенно, красиво и свободно.
+                        </p>
+                        <p style="margin-top: 20px; font-weight: 500; color: var(--dark);">
+                            Что тебя ждет в нашей школе:
+                        </p>
+                        <ul>
+                            <li>Интересные и разнообразные тренировки</li>
+                            <li>Квалифицированный и внимательный тренер</li>
+                            <li>Дружелюбный и поддерживающий коллектив</li>
+                            <li>Отличное настроение и вера в себя</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructor-gallery">
+                <div class="instructor-gallery-item fade-in">
+                    <img src="images/owner-pose-1.jpg" alt="Элемент на пилоне">
+                </div>
+                <div class="instructor-gallery-item fade-in">
+                    <img src="images/owner-pose-2.jpg" alt="Техника выполнения">
+                </div>
+                <div class="instructor-gallery-item fade-in">
+                    <img src="images/owner-pose-3.jpg" alt="Художественная фотография">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги - БЕЗ ФОТО, простые карточки -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
@@ -1176,102 +1207,66 @@
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop" alt="Pole Dance">
-                    </div>
-                    <div class="service-content">
-                        <h3>Pole Dance</h3>
-                        <p>Эффективный способ укрепить все группы мышц, развить гибкость и почувствовать себя уверенно. От базовых элементов до сложных акробатических трюков.</p>
-                        <div class="service-price">от 2 000 ₽</div>
-                    </div>
+                    <span class="service-icon">✨</span>
+                    <h3>Pole Dance</h3>
+                    <p>Эффективный способ укрепить все группы мышц, развить гибкость и почувствовать себя уверенно. От базовых элементов до сложных акробатических трюков.</p>
+                    <div class="service-price">от 2 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1508700929117-9a4ea56e3b2e?w=600&h=400&fit=crop" alt="Striptease Plasticity">
-                    </div>
-                    <div class="service-content">
-                        <h3>Striptease Plasticity</h3>
-                        <p>Развитие пластики, грации и женственности. Научимся двигаться соблазнительно и уверенно, раскроем вашу природную чувственность.</p>
-                        <div class="service-price">от 3 000 ₽</div>
-                    </div>
+                    <span class="service-icon"></span>
+                    <h3>Striptease Plasticity</h3>
+                    <p>Развитие пластики, грации и женственности. Научимся двигаться соблазнительно и уверенно, раскроем вашу природную чувственность.</p>
+                    <div class="service-price">от 3 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop" alt="Stretching">
-                    </div>
-                    <div class="service-content">
-                        <h3>Stretching</h3>
-                        <p>Мягкая растяжка для развития гибкости. Каждое движение помогает мышцам справляться с нагрузками. Идеально для тех, кто мечтает сесть на шпагат.</p>
-                        <div class="service-price">от 3 000 ₽</div>
-                    </div>
+                    <span class="service-icon">🧘‍♀️</span>
+                    <h3>Stretching</h3>
+                    <p>Мягкая растяжка для развития гибкости. Каждое движение помогает мышцам справляться с нагрузками. Идеально для тех, кто мечтает сесть на шпагат.</p>
+                    <div class="service-price">от 3 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=400&fit=crop" alt="Hatha Yoga">
-                    </div>
-                    <div class="service-content">
-                        <h3>Hatha Yoga</h3>
-                        <p>Классическая йога для начинающих и продолжающих. Гармония тела и духа, развитие баланса, осанки и внутреннего спокойствия.</p>
-                        <div class="service-price">от 3 000 ₽</div>
-                    </div>
+                    <span class="service-icon">️</span>
+                    <h3>Hatha Yoga</h3>
+                    <p>Классическая йога для начинающих и продолжающих. Гармония тела и духа, развитие баланса, осанки и внутреннего спокойствия.</p>
+                    <div class="service-price">от 3 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1534258936925-c48947387e3b?w=600&h=400&fit=crop" alt="Dance Mix">
-                    </div>
-                    <div class="service-content">
-                        <h3>Dance Mix</h3>
-                        <p>Динамичное смешение различных танцевальных направлений. Развитие музыкального ритма, координации и выносливости в игровой форме.</p>
-                        <div class="service-price">от 3 000 ₽</div>
-                    </div>
+                    <span class="service-icon">🎵</span>
+                    <h3>Dance Mix</h3>
+                    <p>Динамичное смешение различных танцевальных направлений. Развитие музыкального ритма, координации и выносливости в игровой форме.</p>
+                    <div class="service-price">от 3 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop" alt="Belly Dance">
-                    </div>
-                    <div class="service-content">
-                        <h3>Belly Dance</h3>
-                        <p>Танец живота — восточное искусство движения. Развивает грацию, мелкую моторику мышц и пробуждает женскую энергию.</p>
-                        <div class="service-price">от 3 000 ₽</div>
-                    </div>
+                    <span class="service-icon"></span>
+                    <h3>Belly Dance</h3>
+                    <p>Танец живота — восточное искусство движения. Развивает грацию, мелкую моторику мышц и пробуждает женскую энергию.</p>
+                    <div class="service-price">от 3 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=600&h=400&fit=crop" alt="Strength Training">
-                    </div>
-                    <div class="service-content">
-                        <h3>Strength Training</h3>
-                        <p>Силовые тренировки для развития выносливости и мышечного корсета. Необходимая база для безопасного выполнения трюков на пилоне.</p>
-                        <div class="service-price">от 500 ₽</div>
-                    </div>
+                    <span class="service-icon">💪</span>
+                    <h3>Strength Training</h3>
+                    <p>Силовые тренировки для развития выносливости и мышечного корсета. Необходимая база для безопасного выполнения трюков на пилоне.</p>
+                    <div class="service-price">от 500 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1028f14d7a7b?w=600&h=400&fit=crop" alt="Индивидуальные тренировки">
-                    </div>
-                    <div class="service-content">
-                        <h3>Индивидуальные тренировки</h3>
-                        <p>Персональные занятия с тренером. Максимальное внимание, мгновенная корректировка техники и составление индивидуального плана.</p>
-                        <div class="service-price">от 2 000 ₽</div>
-                    </div>
+                    <span class="service-icon">👑</span>
+                    <h3>Индивидуальные тренировки</h3>
+                    <p>Персональные занятия с тренером. Максимальное внимание, мгновенная корректировка техники и составление индивидуального плана.</p>
+                    <div class="service-price">от 2 000 ₽</div>
                 </div>
 
                 <div class="service-card fade-in">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop" alt="Массаж">
-                    </div>
-                    <div class="service-content">
-                        <h3>Массаж</h3>
-                        <p>Расслабляющий, лимфодренажный массаж, массаж спины и лица. Идеальное восстановление и релакс после интенсивных тренировок.</p>
-                        <div class="service-price">от 4 000 ₽</div>
-                    </div>
+                    <span class="service-icon">💆♀️</span>
+                    <h3>Массаж</h3>
+                    <p>Расслабляющий, лимфодренажный массаж, массаж спины и лица. Идеальное восстановление и релакс после интенсивных тренировок.</p>
+                    <div class="service-price">от 4 000 ₽</div>
                 </div>
             </div>
         </div>
@@ -1355,56 +1350,6 @@
                         <li>VIP обслуживание и поддержка</li>
                     </ul>
                     <a href="https://pole-dance-kiseleva.ru/?utm_source=yandex" target="_blank" class="cta-button">Записаться</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Тренер -->
-    <section class="instructor" id="instructor">
-        <div class="container">
-            <div class="section-title">
-                <p class="section-subtitle">Основатель школы</p>
-                <h2>Евгения Киселева</h2>
-            </div>
-            <div class="instructor-content">
-                <div class="instructor-photo">
-                    <img src="images/owner-main.jpg" alt="Евгения Киселева - основатель школы">
-                </div>
-                <div class="instructor-info">
-                    <h3>Евгения Игоревна Киселева</h3>
-                    <p class="position">Основатель и главный тренер</p>
-                    <blockquote>
-                        «Pole dance – это весело и эффективно! Устала от однообразных тренировок? Приходи к нам на пилон! Здесь ты не только подтянешь фигуру и укрепишь тело, но и получишь массу положительных эмоций!»
-                    </blockquote>
-                    <div class="instructor-bio">
-                        <p>
-                            Профессиональный преподаватель-танцор с многолетним опытом работы. 
-                            Евгения создала уникальное пространство, где каждая девушка может раскрыть свой потенциал, 
-                            почувствовать себя уверенно, красиво и свободно.
-                        </p>
-                        <p style="margin-top: 20px; font-weight: 500; color: var(--dark);">
-                            Что тебя ждет в нашей школе:
-                        </p>
-                        <ul>
-                            <li>Интересные и разнообразные тренировки</li>
-                            <li>Квалифицированный и внимательный тренер</li>
-                            <li>Дружелюбный и поддерживающий коллектив</li>
-                            <li>Отличное настроение и вера в себя</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="instructor-gallery">
-                <div class="instructor-gallery-item fade-in">
-                    <img src="images/owner-pose-1.jpg" alt="Элемент на пилоне">
-                </div>
-                <div class="instructor-gallery-item fade-in">
-                    <img src="images/owner-pose-2.jpg" alt="Техника выполнения">
-                </div>
-                <div class="instructor-gallery-item fade-in">
-                    <img src="images/owner-pose-3.jpg" alt="Художественная фотография">
                 </div>
             </div>
         </div>
@@ -1554,9 +1499,9 @@
             <div class="footer-logo">Pole Dance Kiseleva</div>
             <ul class="footer-links">
                 <li><a href="#about">О школе</a></li>
+                <li><a href="#instructor">Основатель</a></li>
                 <li><a href="#services">Услуги</a></li>
                 <li><a href="#pricing">Цены</a></li>
-                <li><a href="#instructor">Тренер</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
             <div class="footer-bottom">
@@ -1573,14 +1518,13 @@
             navLinks.classList.toggle('active');
         }
 
-        // Закрытие меню при клике на ссылку
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('active');
             });
         });
 
-        // Эффект навигации при скролле
+        // Эффект навигации
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
