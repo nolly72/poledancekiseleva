@@ -21,12 +21,11 @@
             --gold: #D4AF37;
             --gold-light: #E8C547;
             --gold-dark: #B59020;
-            --bg-main: #0d0d0d;
+            --bg: #0f0f0f;
+            --bg-alt: #141414;
             --bg-card: #1a1a1a;
-            --bg-card-hover: #222222;
             --text-main: #f5f5f5;
             --text-muted: #a0a0a0;
-            --text-dark: #1a1a1a;
             --border: rgba(212, 175, 55, 0.2);
         }
 
@@ -39,7 +38,7 @@
             color: var(--text-main);
             line-height: 1.7;
             overflow-x: hidden;
-            background-color: var(--bg-main);
+            background-color: var(--bg);
         }
 
         h1, h2, h3 {
@@ -54,7 +53,7 @@
         }
 
         img {
-            max-width: 100%;
+            width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
@@ -65,7 +64,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(13, 13, 13, 0.95);
+            background: rgba(15, 15, 15, 0.98);
             backdrop-filter: blur(15px);
             z-index: 1000;
             padding: 20px 0;
@@ -75,7 +74,6 @@
 
         nav.scrolled {
             padding: 15px 0;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.5);
         }
 
         .nav-container {
@@ -89,7 +87,7 @@
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 22px;
             color: var(--gold);
             text-decoration: none;
             letter-spacing: 4px;
@@ -153,23 +151,12 @@
         /* Hero */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1510 50%, #0d0d0d 100%);
+            background-color: var(--bg);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            overflow: hidden;
             padding: 120px 20px 80px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
-            pointer-events: none;
         }
 
         .hero-content {
@@ -236,11 +223,16 @@
         }
 
         .cta-button:hover::before { left: 0; }
-        .cta-button:hover { color: var(--bg-main); }
+        .cta-button:hover { color: var(--bg); }
 
         /* Секции */
         section {
             padding: 100px 40px;
+            background-color: var(--bg);
+        }
+
+        section.alt-bg {
+            background-color: var(--bg-alt);
         }
 
         .container {
@@ -280,11 +272,7 @@
             background: var(--gold);
         }
 
-        /* О школе */
-        .about {
-            background: var(--bg-main);
-        }
-
+        /* О школе - РОВНАЯ СЕТКА 3 ФОТО */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -306,15 +294,16 @@
 
         .about-images {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
         }
 
         .about-image {
-            border-radius: 4px;
+            aspect-ratio: 3/4;
             overflow: hidden;
+            background-color: var(--bg-card);
+            border-radius: 4px;
             transition: all 0.5s ease;
-            background: var(--bg-card);
         }
 
         .about-image:hover {
@@ -322,20 +311,7 @@
             box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
         }
 
-        .about-image.large {
-            grid-column: span 2;
-            aspect-ratio: 16/9;
-        }
-
-        .about-image:not(.large) {
-            aspect-ratio: 3/4;
-        }
-
         /* Основатель */
-        .instructor {
-            background: var(--bg-card);
-        }
-
         .instructor-content {
             display: grid;
             grid-template-columns: 380px 1fr;
@@ -352,6 +328,7 @@
             aspect-ratio: 3/4;
             border-radius: 4px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            object-fit: cover;
         }
 
         .instructor-photo::before {
@@ -417,6 +394,7 @@
             top: 4px;
         }
 
+        /* Галерея основателя - РОВНАЯ СЕТКА */
         .instructor-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -425,11 +403,11 @@
         }
 
         .instructor-gallery-item {
-            aspect-ratio: 1;
-            border-radius: 4px;
+            aspect-ratio: 3/4;
             overflow: hidden;
+            background-color: var(--bg-card);
+            border-radius: 4px;
             transition: all 0.5s ease;
-            background: var(--bg-main);
         }
 
         .instructor-gallery-item:hover {
@@ -438,13 +416,9 @@
         }
 
         /* Услуги */
-        .services {
-            background: var(--bg-main);
-        }
-
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -461,7 +435,6 @@
             transform: translateY(-8px);
             border-color: var(--gold);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            background: var(--bg-card-hover);
         }
 
         .service-icon {
@@ -491,10 +464,6 @@
         }
 
         /* Цены */
-        .pricing {
-            background: var(--bg-card);
-        }
-
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -502,7 +471,7 @@
         }
 
         .pricing-card {
-            background: var(--bg-main);
+            background: var(--bg-card);
             border: 1px solid var(--border);
             padding: 45px 35px;
             border-radius: 4px;
@@ -521,7 +490,7 @@
             position: absolute;
             top: 20px; right: -32px;
             background: var(--gold);
-            color: var(--bg-main);
+            color: var(--bg);
             padding: 6px 40px;
             font-size: 10px;
             letter-spacing: 2px;
@@ -589,11 +558,7 @@
             animation: none;
         }
 
-        /* Галерея студии - РОВНАЯ СЕТКА */
-        .studio-gallery {
-            background: var(--bg-main);
-        }
-
+        /* Галерея студии - РОВНАЯ СЕТКА 3 КОЛОНКИ */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -602,11 +567,10 @@
 
         .gallery-item {
             aspect-ratio: 4/3;
-            border-radius: 4px;
             overflow: hidden;
-            position: relative;
+            background-color: var(--bg-card);
+            border-radius: 4px;
             transition: all 0.5s ease;
-            background: var(--bg-card);
         }
 
         .gallery-item:hover {
@@ -615,8 +579,6 @@
         }
 
         .gallery-item img {
-            width: 100%;
-            height: 100%;
             transition: transform 0.7s ease;
         }
 
@@ -625,11 +587,6 @@
         }
 
         /* Преимущества */
-        .features {
-            background: var(--bg-card);
-            padding: 80px 40px;
-        }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -642,7 +599,7 @@
             text-align: center;
             padding: 40px 20px;
             border-radius: 4px;
-            background: var(--bg-main);
+            background: var(--bg-card);
             border: 1px solid var(--border);
             transition: all 0.4s ease;
         }
@@ -673,10 +630,6 @@
         }
 
         /* Контакты */
-        .contact {
-            background: var(--bg-main);
-        }
-
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -768,7 +721,7 @@
             width: 100%;
             padding: 16px;
             border: 1px solid var(--border);
-            background: var(--bg-main);
+            background: var(--bg);
             font-family: 'Montserrat', sans-serif;
             font-size: 14px;
             transition: all 0.3s ease;
@@ -792,7 +745,7 @@
             width: 100%;
             padding: 18px;
             background: var(--gold);
-            color: var(--bg-main);
+            color: var(--bg);
             border: 1px solid var(--gold);
             font-size: 12px;
             letter-spacing: 3px;
@@ -811,7 +764,7 @@
 
         /* Футер */
         footer {
-            background: var(--bg-card);
+            background: var(--bg-alt);
             color: var(--text-main);
             padding: 70px 40px 30px;
             text-align: center;
@@ -903,11 +856,11 @@
             }
 
             .about-images {
-                order: -1;
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .instructor-gallery {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
@@ -917,7 +870,7 @@
                 position: absolute;
                 top: 100%;
                 left: 0; right: 0;
-                background: rgba(13, 13, 13, 0.98);
+                background: rgba(15, 15, 15, 0.98);
                 flex-direction: column;
                 padding: 30px 40px;
                 gap: 20px;
@@ -950,12 +903,8 @@
             }
 
             .about-images {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image.large {
-                grid-column: span 1;
-                aspect-ratio: 16/9;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
             }
 
             .services-grid,
@@ -977,7 +926,13 @@
             }
 
             .gallery-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .instructor-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
             }
 
             .contact-form {
@@ -1026,7 +981,15 @@
                 padding: 35px 25px;
             }
 
+            .about-images {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .instructor-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1093,14 +1056,14 @@
                     </p>
                 </div>
                 <div class="about-images">
-                    <div class="about-image large">
-                        <img src="images/hall-main.jpg" alt="Просторный зал школы">
+                    <div class="about-image fade-in">
+                        <img src="images/hall-main.jpg" alt="Зал школы">
                     </div>
-                    <div class="about-image">
-                        <img src="images/hall-poles.jpg" alt="Профессиональные пилоны">
+                    <div class="about-image fade-in">
+                        <img src="images/hall-poles.jpg" alt="Пилоны">
                     </div>
-                    <div class="about-image">
-                        <img src="images/hall-interior.jpg" alt="Стильный интерьер">
+                    <div class="about-image fade-in">
+                        <img src="images/hall-interior.jpg" alt="Интерьер">
                     </div>
                 </div>
             </div>
@@ -1108,7 +1071,7 @@
     </section>
 
     <!-- Основатель -->
-    <section class="instructor" id="instructor">
+    <section class="instructor alt-bg" id="instructor">
         <div class="container">
             <div class="section-title">
                 <p class="section-subtitle">Основатель школы</p>
@@ -1232,7 +1195,7 @@
     </section>
 
     <!-- Цены -->
-    <section class="pricing" id="pricing">
+    <section class="pricing alt-bg" id="pricing">
         <div class="container">
             <div class="section-title">
                 <p class="section-subtitle">Стоимость</p>
@@ -1314,7 +1277,7 @@
         </div>
     </section>
 
-    <!-- Галерея студии - РОВНАЯ СЕТКА 3 КОЛОНКИ -->
+    <!-- Галерея студии -->
     <section class="studio-gallery" id="studio">
         <div class="container">
             <div class="section-title">
@@ -1338,14 +1301,14 @@
                     <img src="images/studio-5.jpg" alt="Вид с другого ракурса">
                 </div>
                 <div class="gallery-item fade-in">
-                    <img src="images/hall-main.jpg" alt="Панорамный вид зала">
+                    <img src="images/hall-main.jpg" alt="Панорамный вид">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Преимущества -->
-    <section class="features">
+    <section class="features alt-bg">
         <div class="features-grid">
             <div class="feature-item fade-in">
                 <span class="feature-icon">⭐</span>
